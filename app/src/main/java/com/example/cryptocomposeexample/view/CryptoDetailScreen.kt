@@ -1,5 +1,6 @@
 package com.example.cryptocomposeexample.view
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -38,9 +39,9 @@ fun CryptoDetailScreen(
 
       }*/
 
-    val cryptoItem by produceState<Resource<CryptoDetailList>>(initialValue = Resource.Loading()){
+    val cryptoItem = produceState<Resource<CryptoDetailList>>(initialValue = Resource.Loading()){
         value = viewModel.getCrypto(id)
-    }
+    }.value
 
     Box(
         modifier = Modifier
@@ -57,7 +58,7 @@ fun CryptoDetailScreen(
                         style = MaterialTheme.typography.h3,
                         modifier = Modifier.padding(2.dp),
                         fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colors.primary,
+                        color = Color.LightGray,
                         textAlign = TextAlign.Center
                     )
 

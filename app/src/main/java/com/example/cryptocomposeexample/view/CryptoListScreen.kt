@@ -36,7 +36,7 @@ fun CryptoListScreen(
     ) {
         Column {
             Text(
-                text = "Crypto",
+                text = "Crypto Currencies",
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(20.dp),
@@ -106,6 +106,7 @@ fun CryptoRow(
     Column(
         modifier = Modifier
             .fillMaxWidth()
+            .padding(start = 20.dp)
             .background(color = MaterialTheme.colors.secondary)
             .clickable {
                 navController.navigate("detail_list")

@@ -109,8 +109,9 @@ fun CryptoRow(
             .padding(start = 20.dp)
             .background(color = MaterialTheme.colors.secondary)
             .clickable {
-                navController.navigate("detail_list")
-            }
+                navController.navigate(
+                    "crypto_detail_screen/${crypto.currency}/${crypto.price}"
+                )            }
     ) {
 
         Text(

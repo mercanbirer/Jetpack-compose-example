@@ -51,7 +51,6 @@ fun CryptoDetailScreen(
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             when(cryptoItem) {
-///////mercan
                 is Resource.Success -> {
                     val selectedCrypto = cryptoItem.data!![0]
                     Text(text = selectedCrypto.name,
